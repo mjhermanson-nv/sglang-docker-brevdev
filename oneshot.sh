@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-REPO_URL="https://github.com/liveaverage/unsloth-launch.git"
+REPO_URL="https://github.com/mjhermanson-nv/sglang-docker-brevdev/blob/main/oneshot.sh"
 REPO_DIR="/tmp/unsloth-launch"
 
 # 1. Remove and reclone repo in /tmp
@@ -28,9 +28,9 @@ else
 fi
 
 # 4. Start the container
-$DOCKER_COMPOSE_CMD up -d unsloth-jupyter
+$DOCKER_COMPOSE_CMD up -d sglang-jupyter
 
 # 5. Show status and access info
-echo -e "\nUnsloth Launch is running!"
+echo -e "\SGLANG Launch is running!"
 echo "Access Jupyter Lab at: http://localhost:8888 (no password)"
 $DOCKER_COMPOSE_CMD ps
